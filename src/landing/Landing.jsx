@@ -1,21 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
-// Import icons dari Lucide 
-import { ChevronRight, Github, Code, Package, Palette, Zap, BookOpen } from 'lucide-react';
+// Import icons dari Lucide
+import {
+  ChevronRight,
+  Github,
+  Code,
+  Package,
+  Palette,
+  Zap,
+  BookOpen,
+} from "lucide-react";
 
 export default function QuarkaLanding() {
   // Tambahkan useEffect untuk memastikan animasi navbar berjalan lancar
   useEffect(() => {
     // Pastikan event listener untuk resize ditangani dengan baik
     const handleResize = () => {
-      if (window.innerWidth >= 1024) { // lg breakpoint
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenu) mobileMenu.classList.add('hidden');
+      if (window.innerWidth >= 1024) {
+        // lg breakpoint
+        const mobileMenu = document.getElementById("mobile-menu");
+        if (mobileMenu) mobileMenu.classList.add("hidden");
       }
     };
-    
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -40,18 +49,18 @@ export default function QuarkaLanding() {
               type="button"
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-blue-600"
               onClick={() => {
-                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileMenu = document.getElementById("mobile-menu");
                 if (mobileMenu) {
                   // Implementasi animasi yang lebih mulus
-                  if (mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.remove('hidden');
+                  if (mobileMenu.classList.contains("hidden")) {
+                    mobileMenu.classList.remove("hidden");
                     setTimeout(() => {
-                      mobileMenu.classList.add('opacity-100');
+                      mobileMenu.classList.add("opacity-100");
                     }, 10);
                   } else {
-                    mobileMenu.classList.remove('opacity-100');
+                    mobileMenu.classList.remove("opacity-100");
                     setTimeout(() => {
-                      mobileMenu.classList.add('hidden');
+                      mobileMenu.classList.add("hidden");
                     }, 300);
                   }
                 }
@@ -121,11 +130,11 @@ export default function QuarkaLanding() {
           <div
             className="fixed inset-0 z-50 bg-gray-500/20 backdrop-blur-sm"
             onClick={() => {
-              const mobileMenu = document.getElementById('mobile-menu');
+              const mobileMenu = document.getElementById("mobile-menu");
               if (mobileMenu) {
-                mobileMenu.classList.remove('opacity-100');
+                mobileMenu.classList.remove("opacity-100");
                 setTimeout(() => {
-                  mobileMenu.classList.add('hidden');
+                  mobileMenu.classList.add("hidden");
                 }, 300);
               }
             }}
@@ -144,11 +153,11 @@ export default function QuarkaLanding() {
                 type="button"
                 className="-m-2.5 rounded-md p-2.5 text-blue-500"
                 onClick={() => {
-                  const mobileMenu = document.getElementById('mobile-menu');
+                  const mobileMenu = document.getElementById("mobile-menu");
                   if (mobileMenu) {
-                    mobileMenu.classList.remove('opacity-100');
+                    mobileMenu.classList.remove("opacity-100");
                     setTimeout(() => {
-                      mobileMenu.classList.add('hidden');
+                      mobileMenu.classList.add("hidden");
                     }, 300);
                   }
                 }}
@@ -228,7 +237,9 @@ export default function QuarkaLanding() {
         </div>
 
         {/* Hero section dengan ukuran teks yang disesuaikan */}
-        <div className="mx-auto max-w-2xl py-24 sm:py-40 lg:py-48"> {/* Mengurangi padding vertical */}
+        <div className="mx-auto max-w-2xl py-24 sm:py-40 lg:py-48">
+          {" "}
+          {/* Mengurangi padding vertical */}
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm/6 text-blue-600 ring-1 ring-blue-900/10 hover:ring-blue-900/20">
               <span className="font-medium">Quarka UI v1.0 Released</span>{" "}
@@ -239,19 +250,25 @@ export default function QuarkaLanding() {
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-balance text-gray-900 sm:text-6xl font-plus-jakarta-sans"> {/* Ukuran font diperkecil */}
+            <h1 className="text-4xl font-bold tracking-tight text-balance text-gray-900 sm:text-6xl font-plus-jakarta-sans">
+              {" "}
+              {/* Ukuran font diperkecil */}
               Modern Tailwind Components for{" "}
               <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
                 Light Themes
               </span>
             </h1>
-            <p className="mt-6 text-base font-medium text-pretty text-gray-600 sm:text-lg/8"> {/* Ukuran font diperkecil */}
+            <p className="mt-6 text-base font-medium text-pretty text-gray-600 sm:text-lg/8">
+              {" "}
+              {/* Ukuran font diperkecil */}
               Quarka UI provides beautiful, seamless, and modern components
               designed specifically for light theme interfaces. Build stunning
               web experiences with our rounded, blur-enabled, bento-style
               components.
             </p>
-            <div className="mt-8 flex items-center justify-center gap-x-6"> {/* Mengurangi margin top */}
+            <div className="mt-8 flex items-center justify-center gap-x-6">
+              {" "}
+              {/* Mengurangi margin top */}
               <a
                 href="#"
                 className="rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:from-blue-600 hover:to-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all"
@@ -651,35 +668,73 @@ export default function QuarkaLanding() {
           </div>
         </div>
 
-        {/* CTA Section */}
+        {/* CTA Section for Custom Component Requests */}
         <div
           id="get-started"
           className="mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-32"
         >
-          <div className="relative isolate overflow-hidden bg-gradient-to-r from-blue-500 to-indigo-600 px-6 py-16 sm:px-16 sm:py-24 rounded-3xl">
+          <div className="relative isolate overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 px-6 py-16 sm:px-16 sm:py-24 rounded-3xl">
+            {/* Decorative element - subtle dots pattern */}
+            <div className="absolute inset-0 -z-10 opacity-20">
+              <svg
+                className="h-full w-full"
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                height="100%"
+                fill="none"
+              >
+                <defs>
+                  <pattern
+                    id="dotPattern"
+                    x="0"
+                    y="0"
+                    width="20"
+                    height="20"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <circle cx="2" cy="2" r="1" fill="white" />
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#dotPattern)" />
+              </svg>
+            </div>
+
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Ready to get started with Quarka UI?
+                Need a Custom Component?
               </h2>
-              <p className="mt-6 text-lg leading-8 text-blue-100">
-                Join thousands of developers building beautiful light-theme
-                interfaces with our modern Tailwind CSS component library.
+              <p className="mt-6 text-lg leading-8 text-white">
+                Don't see what you're looking for? Let us know what component
+                you need, and our team will consider adding it to the library.
               </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
+
+              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
                 <a
-                  href="#"
-                  className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-white transition-colors"
+                  href="mailto:contact@qurtifa.me?subject=Custom%20Component%20Request%20for%20Quarka%20UI&body=Hello%20Qurtifa%20Team%2C%0A%0AI'm%20interested%20in%20requesting%20a%20custom%20component%20for%20Quarka%20UI.%0A%0AComponent%20description%3A%0A%0AUse%20case%3A%0A%0AThank%20you%21"
+                  className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-indigo-700 shadow-sm hover:bg-blue-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-colors w-full sm:w-auto"
                 >
-                  Get Started
+                  Email Us Your Request
                 </a>
                 <a
-                  href="#"
-                  className="flex items-center gap-1 text-sm font-semibold text-white hover:text-blue-100 transition-colors"
+                  href="https://github.com/qurtifa/quarka-ui/issues/new"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-full bg-indigo-500/20 backdrop-blur-sm px-6 py-3 text-sm font-semibold text-white border border-white/20 hover:bg-indigo-500/30 transition-colors w-full sm:w-auto"
                 >
                   <Github className="h-4 w-4" />
-                  Star on GitHub <span aria-hidden="true">→</span>
+                  Create GitHub Issue
                 </a>
               </div>
+
+              <p className="mt-8 text-sm text-blue-100">
+                Have questions? Feel free to reach out to us at{" "}
+                <a
+                  href="mailto:contact@qurtifa.me"
+                  className="font-medium underline hover:text-white transition-colors"
+                >
+                  contact@qurtifa.me
+                </a>
+              </p>
             </div>
           </div>
         </div>
