@@ -33,7 +33,7 @@ export default function QuarkaLanding() {
               <span className="sr-only">Quarka UI</span>
               <img
                 className="h-10 w-auto"
-                src="/public/quarka.svg"
+                src="/quarka.svg"
                 alt="Quarka UI Logo"
               />
             </a>
@@ -122,7 +122,7 @@ export default function QuarkaLanding() {
                 <span className="sr-only">Quarka UI</span>
                 <img
                   className="h-8 w-auto"
-                  src="/public/quarka.svg"
+                  src="/quarka.svg"
                   alt="Quarka UI Logo"
                 />
               </a>
