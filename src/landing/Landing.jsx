@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 // Import icons dari Lucide
 import {
@@ -84,30 +85,30 @@ export default function QuarkaLanding() {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-            <a
-              href="#components"
+            <Link
+              to="/components"
               className="text-sm/6 font-semibold text-blue-500 hover:text-indigo-600 transition-colors"
             >
               Components
-            </a>
-            <a
-              href="#features"
+            </Link>
+            <Link
+              to="/features"
               className="text-sm/6 font-semibold text-blue-500 hover:text-indigo-600 transition-colors"
             >
               Features
-            </a>
-            <a
-              href="#docs"
+            </Link>
+            <Link
+              to="/docs"
               className="text-sm/6 font-semibold text-blue-500 hover:text-indigo-600 transition-colors"
             >
               Documentation
-            </a>
-            <a
-              href="#github"
+            </Link>
+            <Link
+              to="/github"
               className="text-sm/6 font-semibold text-blue-500 hover:text-indigo-600 transition-colors"
             >
               GitHub
-            </a>
+            </Link>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a

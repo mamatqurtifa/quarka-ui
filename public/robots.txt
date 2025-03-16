@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Disallow tracking parameters
+Disallow: /*?utm_*
+Disallow: /*?fbclid=*
+
+# Sitemap location
+Sitemap: https://quarka.qurtifa.me/sitemap.xml
+
+# Crawl delay for heavy resources
+Crawl-delay: 10
