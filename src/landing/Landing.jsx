@@ -1,28 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
-// Import icons dari Lucide (isi dengan import yang sesuai)
-import {
-  ChevronRight,
-  Github,
-  Code,
-  Package,
-  Palette,
-  Zap,
-  BookOpen,
-} from "lucide-react";
+// Import icons dari Lucide 
+import { ChevronRight, Github, Code, Package, Palette, Zap, BookOpen } from 'lucide-react';
 
 export default function QuarkaLanding() {
+  // Tambahkan useEffect untuk memastikan animasi navbar berjalan lancar
   useEffect(() => {
-    // Memastikan Alpine data tersedia untuk navbar
-    if (window.Alpine) {
-      window.Alpine.data("quarkaNavbar", () => ({
-        mobileMenuOpen: false,
-      }));
-    }
+    // Pastikan event listener untuk resize ditangani dengan baik
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) { // lg breakpoint
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenu) mobileMenu.classList.add('hidden');
+      }
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
-    <div className="bg-white" x-data="quarkaNavbar">
+    <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           className="flex items-center justify-between p-6 lg:px-8"
@@ -32,8 +29,8 @@ export default function QuarkaLanding() {
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Quarka UI</span>
               <img
-                className="h-10 w-auto"
-                src="/quarka.svg"
+                className="h-8 w-auto" // Diperkecil sedikit dari h-10 menjadi h-8
+                src="/public/quarka.svg"
                 alt="Quarka UI Logo"
               />
             </a>
@@ -42,11 +39,27 @@ export default function QuarkaLanding() {
             <button
               type="button"
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-blue-600"
-              x-on:click="mobileMenuOpen = true"
+              onClick={() => {
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileMenu) {
+                  // Implementasi animasi yang lebih mulus
+                  if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('hidden');
+                    setTimeout(() => {
+                      mobileMenu.classList.add('opacity-100');
+                    }, 10);
+                  } else {
+                    mobileMenu.classList.remove('opacity-100');
+                    setTimeout(() => {
+                      mobileMenu.classList.add('hidden');
+                    }, 300);
+                  }
+                }
+              }}
             >
               <span className="sr-only">Open main menu</span>
               <svg
-                className="size-6"
+                className="w-5 h-5" // Ukuran ikon diseragamkan
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
@@ -97,43 +110,52 @@ export default function QuarkaLanding() {
           </div>
         </nav>
 
-        {/* Mobile menu */}
+        {/* Mobile menu dengan animasi yang ditingkatkan */}
         <div
-          className="lg:hidden"
+          className="lg:hidden hidden opacity-0 transition-opacity duration-300"
           role="dialog"
           aria-modal="true"
-          x-show="mobileMenuOpen"
-          x-cloak
-          x-transition:enter="transition ease-out duration-200"
-          x-transition:enter-start="opacity-0 scale-95"
-          x-transition:enter-end="opacity-100 scale-100"
-          x-transition:leave="transition ease-in duration-150"
-          x-transition:leave-start="opacity-100 scale-100"
-          x-transition:leave-end="opacity-0 scale-95"
+          id="mobile-menu"
         >
-          {/* Background backdrop */}
+          {/* Background backdrop dengan animasi */}
           <div
             className="fixed inset-0 z-50 bg-gray-500/20 backdrop-blur-sm"
-            x-on:click="mobileMenuOpen = false"
+            onClick={() => {
+              const mobileMenu = document.getElementById('mobile-menu');
+              if (mobileMenu) {
+                mobileMenu.classList.remove('opacity-100');
+                setTimeout(() => {
+                  mobileMenu.classList.add('hidden');
+                }, 300);
+              }
+            }}
           ></div>
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-blue-900/10 shadow-lg">
+          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-blue-900/10 shadow-lg transform transition-transform duration-300 ease-out">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Quarka UI</span>
                 <img
-                  className="h-8 w-auto"
-                  src="/quarka.svg"
+                  className="h-8 w-auto" // Disesuaikan dengan logo header
+                  src="/public/quarka.svg"
                   alt="Quarka UI Logo"
                 />
               </a>
               <button
                 type="button"
                 className="-m-2.5 rounded-md p-2.5 text-blue-500"
-                x-on:click="mobileMenuOpen = false"
+                onClick={() => {
+                  const mobileMenu = document.getElementById('mobile-menu');
+                  if (mobileMenu) {
+                    mobileMenu.classList.remove('opacity-100');
+                    setTimeout(() => {
+                      mobileMenu.classList.add('hidden');
+                    }, 300);
+                  }
+                }}
               >
                 <span className="sr-only">Close menu</span>
                 <svg
-                  className="size-6"
+                  className="w-5 h-5" // Ukuran ikon diseragamkan
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
@@ -205,7 +227,8 @@ export default function QuarkaLanding() {
           ></div>
         </div>
 
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        {/* Hero section dengan ukuran teks yang disesuaikan */}
+        <div className="mx-auto max-w-2xl py-24 sm:py-40 lg:py-48"> {/* Mengurangi padding vertical */}
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm/6 text-blue-600 ring-1 ring-blue-900/10 hover:ring-blue-900/20">
               <span className="font-medium">Quarka UI v1.0 Released</span>{" "}
@@ -216,19 +239,19 @@ export default function QuarkaLanding() {
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-5xl font-bold tracking-tight text-balance text-gray-900 sm:text-7xl font-plus-jakarta-sans">
+            <h1 className="text-4xl font-bold tracking-tight text-balance text-gray-900 sm:text-6xl font-plus-jakarta-sans"> {/* Ukuran font diperkecil */}
               Modern Tailwind Components for{" "}
               <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
                 Light Themes
               </span>
             </h1>
-            <p className="mt-8 text-lg font-medium text-pretty text-gray-600 sm:text-xl/8">
+            <p className="mt-6 text-base font-medium text-pretty text-gray-600 sm:text-lg/8"> {/* Ukuran font diperkecil */}
               Quarka UI provides beautiful, seamless, and modern components
               designed specifically for light theme interfaces. Build stunning
               web experiences with our rounded, blur-enabled, bento-style
               components.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="mt-8 flex items-center justify-center gap-x-6"> {/* Mengurangi margin top */}
               <a
                 href="#"
                 className="rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:from-blue-600 hover:to-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-all"
@@ -236,7 +259,7 @@ export default function QuarkaLanding() {
                 Get started
               </a>
               <a
-                href="https://github.com/mamatqurtifa/quarka-ui"
+                href="#"
                 className="text-sm/6 font-semibold text-blue-600 hover:text-indigo-600 transition-colors"
               >
                 View on GitHub <span aria-hidden="true">→</span>
@@ -650,7 +673,7 @@ export default function QuarkaLanding() {
                   Get Started
                 </a>
                 <a
-                  href="https://github.com/mamatqurtifa/quarka-ui"
+                  href="#"
                   className="flex items-center gap-1 text-sm font-semibold text-white hover:text-blue-100 transition-colors"
                 >
                   <Github className="h-4 w-4" />
@@ -681,31 +704,24 @@ export default function QuarkaLanding() {
         <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
           <div className="flex justify-center space-x-6 md:order-2">
             <a
-              href="https://github.com/mamatqurtifa/quarka-ui"
+              href="#"
               className="text-gray-500 hover:text-blue-500 transition-colors"
             >
               <span className="sr-only">GitHub</span>
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="mailto:contact@qurtifa.me"
+              href="#"
               className="text-gray-500 hover:text-blue-500 transition-colors"
             >
-              <span className="sr-only">Email</span>
+              <span className="sr-only">Twitter</span>
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                className="h-5 w-5"
+                fill="currentColor"
                 viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-mail h-5 w-5"
+                aria-hidden="true"
               >
-                <rect width="20" height="16" x="2" y="4" rx="2" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
               </svg>
             </a>
           </div>
