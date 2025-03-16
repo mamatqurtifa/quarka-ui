@@ -6,3 +6,8 @@
     font-family: "Plus Jakarta Sans", sans-serif;
   }
 }
+
+/* Alpine.js styling */
+[x-cloak] {
+  display: none !important;
+}

@@ -3,12 +3,17 @@ import { createRoot } from "react-dom/client";
 import "./styles/index.css";
 
 import Alpine from "alpinejs";
+import QuarkaLanding from "./landing/Landing";
 
+// Setup Alpine.js
 window.Alpine = Alpine;
+Alpine.data('quarkaNavbar', () => ({
+  mobileMenuOpen: false
+}));
 Alpine.start();
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <h1 className="text-3xl text-blue-400">Qurtifa</h1>
+    <QuarkaLanding />
   </StrictMode>
 );
