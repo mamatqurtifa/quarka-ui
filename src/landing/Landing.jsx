@@ -39,7 +39,7 @@ export default function QuarkaLanding() {
               <span className="sr-only">Quarka UI</span>
               <img
                 className="h-8 w-auto" // Diperkecil sedikit dari h-10 menjadi h-8
-                src="/public/quarka.svg"
+                src="/quarka.svg"
                 alt="Quarka UI Logo"
               />
             </a>
@@ -145,7 +145,7 @@ export default function QuarkaLanding() {
                 <span className="sr-only">Quarka UI</span>
                 <img
                   className="h-8 w-auto" // Disesuaikan dengan logo header
-                  src="/public/quarka.svg"
+                  src="/quarka.svg"
                   alt="Quarka UI Logo"
                 />
               </a>
