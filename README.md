@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="quarka.svg" alt="Quarka UI Logo" width="200" height="auto" />
+  <img src="https://quarkaui.qurtifa.my.id/quarka.svg" alt="Quarka UI Logo" width="200" height="auto" />
   <h1>Quarka UI</h1>
   <p><strong>Modern Tailwind CSS Component Library for Light Themes</strong></p>
   
