@@ -196,7 +196,7 @@ export default function QuarkaLanding() {
                     Features
                   </a>
                   <a
-                    href="#docs"
+                    href="/docs"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-blue-500 hover:bg-blue-50 transition-colors"
                   >
                     Documentation
