@@ -13,31 +13,6 @@ export default function Documentation() {
   return (
     <div className="bg-white min-h-screen">
       {/* Header */}
-      <header className="sticky top-0 z-30 flex items-center justify-between px-4 py-4 bg-white border-b border-gray-200 sm:px-6 lg:px-8">
-        <div className="flex items-center">
-          <button
-            type="button"
-            className="inline-flex items-center p-2 mr-3 text-gray-500 rounded-md lg:hidden hover:text-gray-900 hover:bg-gray-100"
-            onClick={() => setSidebarOpen(true)}
-          >
-            <span className="sr-only">Open sidebar</span>
-            <MenuIcon className="w-6 h-6" aria-hidden="true" />
-          </button>
-          <h1 className="text-lg font-semibold text-gray-900">Documentation</h1>
-        </div>
-        
-        {/* Right side of header - could include search, etc. */}
-        <div className="flex items-center space-x-4">
-          <a
-            href="https://github.com/qurtifa/quarka-ui"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-gray-500 hover:text-gray-900"
-          >
-            GitHub
-          </a>
-        </div>
-      </header>
       
       {/* Mobile sidebar */}
       <div

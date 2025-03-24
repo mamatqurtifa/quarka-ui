@@ -10,37 +10,48 @@ export default function Installation() {
       
       <h2 className="text-2xl font-semibold mt-8 mb-4">Prerequisites</h2>
       <p className="mb-4">
-        Quarka UI requires Tailwind CSS as a peer dependency. Make sure you have Tailwind CSS installed in your project.
+        Quarka UI requires Tailwind CSS and Alpine.js. Make sure you have them installed in your project.
       </p>
+      
+      <h2 className="text-2xl font-semibold mt-8 mb-4">Installing Tailwind CSS</h2>
+      <p className="mb-6">
+        Follow the official Tailwind CSS installation guide:
+      </p>
+      
       <div className="bg-gray-100 p-6 rounded-xl mb-8">
         <h3 className="text-lg font-medium mb-3">Install Tailwind CSS</h3>
+        <p className="mb-4">
+          You can install Tailwind CSS via npm:
+        </p>
         <div className="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto">
           <code>npm install tailwindcss</code>
         </div>
+        <p className="mt-4 text-sm text-gray-600">
+          For more detailed installation instructions, visit the <a href="https://tailwindcss.com/docs/installation" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Tailwind CSS Installation Guide</a>.
+        </p>
       </div>
       
-      <h2 className="text-2xl font-semibold mt-8 mb-4">Installing Quarka UI</h2>
+      <h2 className="text-2xl font-semibold mt-8 mb-4">Installing Alpine.js</h2>
       <p className="mb-6">
-        You can install Quarka UI using npm or yarn:
+        Follow the official Alpine.js installation guide:
       </p>
       
-      <div className="bg-gray-100 p-6 rounded-xl mb-6">
-        <h3 className="text-lg font-medium mb-3">Using npm</h3>
-        <div className="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto">
-          <code>npm install quarka-ui</code>
-        </div>
-      </div>
-      
       <div className="bg-gray-100 p-6 rounded-xl mb-8">
-        <h3 className="text-lg font-medium mb-3">Using yarn</h3>
+        <h3 className="text-lg font-medium mb-3">Install Alpine.js</h3>
+        <p className="mb-4">
+          You can include Alpine.js via CDN:
+        </p>
         <div className="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto">
-          <code>yarn add quarka-ui</code>
+          <code>{`<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.9.1/dist/cdn.min.js"></script>`}</code>
         </div>
+        <p className="mt-4 text-sm text-gray-600">
+          For more detailed installation instructions, visit the <a href="https://alpinejs.dev/essentials/installation" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Alpine.js Installation Guide</a>.
+        </p>
       </div>
       
       <h2 className="text-2xl font-semibold mt-8 mb-4">Configuration</h2>
       <p className="mb-6">
-        After installation, you need to add Quarka UI to your Tailwind configuration. Create or edit your <code className="bg-gray-100 px-1 py-0.5 rounded">tailwind.config.js</code> file:
+        After installing Tailwind CSS and Alpine.js, you need to configure your project to use them. Create or edit your <code className="bg-gray-100 px-1 py-0.5 rounded">tailwind.config.js</code> file:
       </p>
       
       <div className="bg-gray-100 p-6 rounded-xl mb-8">
@@ -80,7 +91,7 @@ export default function Installation() {
       
       <h2 className="text-2xl font-semibold mt-8 mb-4">Usage</h2>
       <p className="mb-6">
-        After installing and configuring Quarka UI, you can start using its components in your project:
+        After installing and configuring Tailwind CSS and Alpine.js, you can start using them in your project:
       </p>
       
       <div className="bg-gray-100 p-6 rounded-xl">
@@ -101,7 +112,7 @@ function App() {
       
       <h2 className="text-2xl font-semibold mt-8 mb-4">Next Steps</h2>
       <p className="mb-4">
-        Now that you have Quarka UI installed, check out our:
+        Now that you have Tailwind CSS and Alpine.js installed, check out our:
       </p>
       <ul className="list-disc pl-6 space-y-2">
         <li><a href="/docs/getting-started/quick-start" className="text-blue-600 hover:underline">Quick Start Guide</a> - Learn the basics of using Quarka UI</li>

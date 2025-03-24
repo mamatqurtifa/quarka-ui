@@ -1,35 +1,47 @@
-import React from 'react';
+import React from "react";
 
 // Default content for introduction page
 const IntroductionContent = () => (
   <div>
-    <h1 className="text-3xl font-bold mb-6">Welcome to Quarka UI Documentation</h1>
+    <h1 className="text-3xl font-bold mb-6">
+      Welcome to Quarka UI Documentation
+    </h1>
     <p className="text-lg text-gray-700 mb-6">
-      Quarka UI is a modern Tailwind CSS component library designed specifically for light-themed interfaces. It provides beautiful, seamless, and customizable components to help you build stunning web experiences.
+      Quarka UI is a modern Tailwind CSS component library designed specifically
+      for light-themed interfaces. It provides beautiful, seamless, and
+      customizable components to help you build stunning web experiences.
     </p>
-    
+
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-      <div className="bg-blue-50 p-6 rounded-xl">
-        <h2 className="text-xl font-semibold text-blue-800 mb-2">Getting Started</h2>
+      <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl shadow-md transform transition-transform hover:scale-105">
+        <h2 className="text-xl font-semibold text-blue-800 mb-2">
+          Getting Started
+        </h2>
         <p className="text-gray-700 mb-4">
           Learn how to install and integrate Quarka UI into your project.
         </p>
-        <a href="/docs/getting-started/installation" className="text-blue-600 font-medium hover:text-blue-800">
+        <a
+          href="/docs/getting-started/installation"
+          className="text-blue-600 font-medium hover:text-blue-800 transition-colors"
+        >
           Learn more →
         </a>
       </div>
-      
-      <div className="bg-blue-50 p-6 rounded-xl">
+
+      <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl shadow-md transform transition-transform hover:scale-105">
         <h2 className="text-xl font-semibold text-blue-800 mb-2">Components</h2>
         <p className="text-gray-700 mb-4">
           Explore the wide range of ready-to-use components.
         </p>
-        <a href="/docs/components/buttons" className="text-blue-600 font-medium hover:text-blue-800">
+        <a
+          href="/docs/components/buttons"
+          className="text-blue-600 font-medium hover:text-blue-800 transition-colors"
+        >
           Browse components →
         </a>
       </div>
     </div>
-    
+
     <h2 className="text-2xl font-bold mt-12 mb-4">Features</h2>
     <ul className="list-disc pl-6 space-y-2 mb-8">
       <li>Modern design with rounded corners and subtle shadows</li>
@@ -39,16 +51,6 @@ const IntroductionContent = () => (
       <li>Zero dependencies other than Tailwind CSS</li>
       <li>Well-documented API and examples</li>
     </ul>
-    
-    <div className="bg-gray-100 p-6 rounded-xl mt-8">
-      <h3 className="text-lg font-medium mb-3">Quick Installation</h3>
-      <div className="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto">
-        <code>npm install quarka-ui</code>
-      </div>
-      <p className="mt-4 text-sm text-gray-600">
-        For more detailed installation instructions, check the <a href="/docs/getting-started/installation" className="text-blue-600 hover:underline">Installation Guide</a>.
-      </p>
-    </div>
   </div>
 );
 
@@ -59,12 +61,12 @@ const ContentComingSoon = ({ section, subsection }) => (
       Content Coming Soon
     </h1>
     <p className="text-gray-600 max-w-md mx-auto mb-6">
-      We're currently developing documentation for <strong>{subsection || section}</strong>. 
-      Please check back later.
+      We're currently developing documentation for{" "}
+      <strong>{subsection || section}</strong>. Please check back later.
     </p>
-    <a 
+    <a
       href="/docs/introduction"
-      className="inline-flex mt-6 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+      className="inline-flex mt-6 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
     >
       Return to Documentation Home
     </a>
@@ -72,48 +74,56 @@ const ContentComingSoon = ({ section, subsection }) => (
 );
 
 // Pre-defined content components (only import those that already exist)
-const GettingStartedInstallation = React.lazy(() => import('./content/getting-started/installation'));
-const ComponentsButtons = React.lazy(() => import('./content/components/buttons'));
+const GettingStartedInstallation = React.lazy(() =>
+  import("./content/getting-started/installation")
+);
+const ComponentsButtons = React.lazy(() =>
+  import("./content/components/buttons")
+);
 
 export default function DocContent({ section, subsection }) {
   // Define content map for only existing components
   const contentComponents = {
-    'introduction': {
-      default: IntroductionContent
+    introduction: {
+      default: IntroductionContent,
     },
-    'getting-started': {
-      'installation': GettingStartedInstallation,
+    "getting-started": {
+      installation: GettingStartedInstallation,
     },
-    'components': {
-      'buttons': ComponentsButtons,
-    }
+    components: {
+      buttons: ComponentsButtons,
+    },
   };
 
   // Render content based on section and subsection
   const renderContent = () => {
     try {
       // For introduction without subsection
-      if (section === 'introduction' && !subsection) {
+      if (section === "introduction" && !subsection) {
         return <IntroductionContent />;
       }
-      
+
       // For defined sections and subsections
       if (section in contentComponents) {
         if (!subsection && contentComponents[section].default) {
           const DefaultContent = contentComponents[section].default;
-          return <React.Suspense fallback={<div>Loading...</div>}>
-            <DefaultContent />
-          </React.Suspense>;
+          return (
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <DefaultContent />
+            </React.Suspense>
+          );
         }
-        
+
         if (subsection && contentComponents[section][subsection]) {
           const ContentComponent = contentComponents[section][subsection];
-          return <React.Suspense fallback={<div>Loading...</div>}>
-            <ContentComponent />
-          </React.Suspense>;
+          return (
+            <React.Suspense fallback={<div>Loading...</div>}>
+              <ContentComponent />
+            </React.Suspense>
+          );
         }
       }
-      
+
       // For content not yet available
       return <ContentComingSoon section={section} subsection={subsection} />;
     } catch (error) {
@@ -125,31 +135,39 @@ export default function DocContent({ section, subsection }) {
   return (
     <div className="prose prose-blue max-w-none">
       {renderContent()}
-      
+
       {/* Pagination at bottom */}
       <div className="mt-16 border-t border-gray-200 pt-6">
         <div className="flex justify-between">
           <div>
             {/* Previous link would go here */}
-            <a href="#" className="text-sm font-medium text-blue-600 hover:text-blue-800">
+            <a
+              href="#"
+              className="text-sm font-medium text-blue-600 hover:text-blue-800"
+            >
               ← Previous
             </a>
           </div>
           <div>
             {/* Next link would go here */}
-            <a href="#" className="text-sm font-medium text-blue-600 hover:text-blue-800">
+            <a
+              href="#"
+              className="text-sm font-medium text-blue-600 hover:text-blue-800"
+            >
               Next →
             </a>
           </div>
         </div>
       </div>
-      
+
       {/* Footer with edit link and last updated */}
       <div className="mt-8 pt-8 border-t border-gray-200">
         <div className="flex items-center justify-between text-sm text-gray-500">
           <a
-            href={`https://github.com/qurtifa/quarka-ui/edit/main/docs/${section}/${subsection || 'index'}.md`}
-            className="flex items-center hover:text-gray-900"
+            href={`https://github.com/qurtifa/quarka-ui/edit/main/docs/${section}/${
+              subsection || "index"
+            }.md`}
+            className="flex items-center hover:text-gray-900 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
           >

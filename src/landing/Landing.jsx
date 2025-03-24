@@ -103,20 +103,20 @@ export default function QuarkaLanding() {
             >
               Documentation
             </Link>
-            <Link
-              to="/github"
+            <a
+              href="https://github.com/qurtifa/quarka-ui/"
               className="text-sm/6 font-semibold text-blue-500 hover:text-indigo-600 transition-colors"
             >
               GitHub
-            </Link>
+            </a>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="#get-started"
+            <Link
+              to="/docs"
               className="flex items-center gap-1 rounded-full px-4 py-1.5 text-sm font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 transition-colors shadow-sm"
             >
               Get Started <ChevronRight className="h-4 w-4" />
-            </a>
+            </Link>
           </div>
         </nav>
 
@@ -183,38 +183,38 @@ export default function QuarkaLanding() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  <a
-                    href="#components"
+                  <Link
+                    to="/components"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-blue-500 hover:bg-blue-50 transition-colors"
                   >
                     Components
-                  </a>
-                  <a
-                    href="#features"
+                  </Link>
+                  <Link
+                    to="/features"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-blue-500 hover:bg-blue-50 transition-colors"
                   >
                     Features
-                  </a>
-                  <a
-                    href="/docs"
+                  </Link>
+                  <Link
+                    to="/docs"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-blue-500 hover:bg-blue-50 transition-colors"
                   >
                     Documentation
-                  </a>
+                  </Link>
                   <a
-                    href="#github"
+                    href="https://github.com/qurtifa/quarka-ui/"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-blue-500 hover:bg-blue-50 transition-colors"
                   >
                     GitHub
                   </a>
                 </div>
                 <div className="py-6">
-                  <a
-                    href="#get-started"
+                  <Link
+                    to="/docs"
                     className="flex items-center w-full justify-center gap-1 rounded-full px-4 py-2 text-base/7 font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 transition-colors shadow-sm"
                   >
                     Get Started <ChevronRight className="h-4 w-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -277,7 +277,7 @@ export default function QuarkaLanding() {
                 Get started
               </a>
               <a
-                href="#"
+                href="https://github.com/qurtifa/quarka-ui/"
                 className="text-sm/6 font-semibold text-blue-600 hover:text-indigo-600 transition-colors"
               >
                 View on GitHub <span aria-hidden="true">→</span>
