@@ -96,7 +96,10 @@ export default function Sidebar({
         </svg>
       ),
       items: [
-        { name: "Buttons", href: "/docs/components/buttons", badge: "New" },
+        { name: "Buttons", href: "/docs/components/buttons" },
+        { name: "Button Groups", href: "/docs/components/button-group", badge: "New" },
+        { name: "Icon Buttons", href: "/docs/components/icon-button", badge: "New" },
+        { name: "Dropdowns", href: "/docs/components/dropdown", badge: "New" },
         { name: "Cards", href: "/docs/components/cards" },
         { name: "Forms", href: "/docs/components/forms" },
         { name: "Navigation", href: "/docs/components/navigation" },

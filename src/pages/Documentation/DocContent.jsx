@@ -81,6 +81,10 @@ const GettingStartedInstallation = React.lazy(() =>
 const ComponentsButtons = React.lazy(() =>
   import("./content/components/buttons")
 );
+// Add this new import for button-group
+const ComponentsButtonGroup = React.lazy(() =>
+  import("./content/components/button-group")
+);
 
 export default function DocContent({ section, subsection }) {
   // Define content map for only existing components
@@ -93,6 +97,7 @@ export default function DocContent({ section, subsection }) {
     },
     components: {
       buttons: ComponentsButtons,
+      "button-group": ComponentsButtonGroup, // Added button-group component
     },
   };
 
@@ -183,7 +188,7 @@ export default function DocContent({ section, subsection }) {
             </svg>
             Edit this page on GitHub
           </a>
-          <span>Last updated: 2025-03-17</span>
+          <span>Last updated: 2025-03-24</span>
         </div>
       </div>
     </div>
