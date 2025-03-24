@@ -5,95 +5,158 @@ export default function Buttons() {
     <div>
       <h1 className="text-3xl font-bold mb-6">Buttons</h1>
       <p className="mb-6">
-        Buttons are interactive elements that users can click or tap to trigger
-        actions in your interface. Quarka UI provides a variety of button styles
-        and variants to help you create engaging user experiences.
+        Buttons are essential interactive elements in modern interfaces. Quarka
+        UI provides an elegant, lightweight approach to buttons using Tailwind
+        CSS, focusing on smooth interactions, beautiful transitions, and
+        accessibility.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-4">Basic Usage</h2>
       <p className="mb-6">
-        The Button component is versatile and can be used in different contexts.
-        Here's how to use it:
+        Quarka UI buttons combine simplicity with style, offering a range of
+        variants that maintain a cohesive design language:
       </p>
 
       <div className="bg-gray-100 p-6 rounded-xl mb-8">
-        <div className="mb-4">
-          <h3 className="text-lg font-medium mb-3">Import</h3>
-          <div className="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto">
-            <code>import Button from 'quarka-ui';</code>
+        <h3 className="text-lg font-medium mb-3">Basic Button Styles</h3>
+        <div className="bg-gray-900 rounded-md mb-6">
+          <div className="flex items-center px-4 py-2 bg-gray-800 rounded-t-md">
+            <div className="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
+            <div className="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
+            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+          </div>
+          <div className="bg-gray-900 text-gray-100 p-4 rounded-b-md overflow-x-auto">
+            <pre>{`<button class="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg">
+  Primary Button
+</button>
+
+<button class="px-4 py-2 bg-gray-100 text-gray-800 rounded-full hover:bg-gray-200 transform hover:scale-105 transition-all duration-200 shadow-sm hover:shadow-md">
+  Secondary Button
+</button>
+
+<button class="px-4 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50 hover:text-blue-600 transform hover:scale-105 transition-all duration-200">
+  Outline Button
+</button>
+
+<button class="px-4 py-2 text-blue-500 rounded-full hover:bg-blue-50 transform hover:translate-x-1 transition-all duration-200">
+  Ghost Button
+</button>`}</pre>
           </div>
         </div>
 
-        <h3 className="text-lg font-medium mb-3">Example</h3>
-        <div className="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto mb-4">
-          <pre>{`<Button variant="primary">Primary Button</Button>
-<Button variant="secondary">Secondary Button</Button>
-<Button variant="outline">Outline Button</Button>
-<Button variant="ghost">Ghost Button</Button>`}</pre>
-        </div>
-
         <h3 className="text-lg font-medium mb-3">Preview</h3>
-        <div className="bg-white p-6 rounded-lg border border-gray-300 flex flex-wrap gap-3">
-          <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+        <div className="bg-white p-6 rounded-lg border border-gray-300 flex flex-wrap gap-4">
+          <button className="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg">
             Primary Button
           </button>
-          <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition-colors">
+          <button className="px-4 py-2 bg-gray-100 text-gray-800 rounded-full hover:bg-gray-200 transform hover:scale-105 transition-all duration-200 shadow-sm hover:shadow-md">
             Secondary Button
           </button>
-          <button className="px-4 py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50 transition-colors">
+          <button className="px-4 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50 hover:text-blue-600 transform hover:scale-105 transition-all duration-200">
             Outline Button
           </button>
-          <button className="px-4 py-2 text-blue-600 hover:bg-blue-50 rounded-md transition-colors">
+          <button className="px-4 py-2 text-blue-500 rounded-full hover:bg-blue-50 transform hover:translate-x-1 transition-all duration-200">
             Ghost Button
           </button>
         </div>
       </div>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-4">Button Sizes</h2>
+      <h2 className="text-2xl font-semibold mt-10 mb-4">
+        Modern Soft UI Buttons
+      </h2>
       <p className="mb-6">
-        Quarka UI provides different button sizes to accommodate various design
-        needs:
+        Quarka UI embraces the modern "soft UI" aesthetic with subtle shadows
+        and gentle interactions:
       </p>
 
       <div className="bg-gray-100 p-6 rounded-xl mb-8">
-        <h3 className="text-lg font-medium mb-3">Example</h3>
-        <div className="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto mb-4">
-          <pre>{`<Button size="sm">Small Button</Button>
-<Button size="md">Medium Button</Button>
-<Button size="lg">Large Button</Button>`}</pre>
+        <h3 className="text-lg font-medium mb-3">Soft UI Button Style</h3>
+        <div className="bg-gray-900 rounded-md mb-6">
+          <div className="flex items-center px-4 py-2 bg-gray-800 rounded-t-md">
+            <div className="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
+            <div className="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
+            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+          </div>
+          <div className="bg-gray-900 text-gray-100 p-4 rounded-b-md overflow-x-auto">
+            <pre>{`<button class="px-5 py-2.5 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">
+  Gradient Button
+</button>
+
+<button class="px-5 py-2.5 bg-white text-gray-700 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-200">
+  Soft Neutral
+</button>
+
+<button class="px-5 py-2.5 bg-gray-900 text-white rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
+  Dark Mode
+</button>`}</pre>
+          </div>
         </div>
 
         <h3 className="text-lg font-medium mb-3">Preview</h3>
-        <div className="bg-white p-6 rounded-lg border border-gray-300 flex flex-wrap items-center gap-3">
-          <button className="px-2 py-1 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-            Small Button
+        <div className="bg-white p-6 rounded-lg border border-gray-300 flex flex-wrap gap-4">
+          <button className="px-5 py-2.5 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-xl shadow-md hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">
+            Gradient Button
           </button>
-          <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-            Medium Button
+          <button className="px-5 py-2.5 bg-white text-gray-700 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-200">
+            Soft Neutral
           </button>
-          <button className="px-6 py-3 text-lg bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-            Large Button
+          <button className="px-5 py-2.5 bg-gray-900 text-white rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
+            Dark Mode
           </button>
         </div>
       </div>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-4">Button with Icons</h2>
+      <h2 className="text-2xl font-semibold mt-10 mb-4">
+        Animated Icon Buttons
+      </h2>
       <p className="mb-6">
-        Add icons to your buttons to enhance visual clarity and provide
-        additional context:
+        Add life to your buttons with smooth icon animations that enhance user
+        interaction:
       </p>
 
       <div className="bg-gray-100 p-6 rounded-xl mb-8">
-        <h3 className="text-lg font-medium mb-3">Example</h3>
-        <div className="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto mb-4">
-          <pre>{`<Button variant="primary" leftIcon={<SearchIcon />}>Search</Button>
-<Button variant="secondary" rightIcon={<ArrowRightIcon />}>Next</Button>
-<Button variant="outline" leftIcon={<EditIcon />} rightIcon={<SaveIcon />}>Edit and Save</Button>`}</pre>
+        <h3 className="text-lg font-medium mb-3">Icon Animation Examples</h3>
+        <div className="bg-gray-900 rounded-md mb-6">
+          <div className="flex items-center px-4 py-2 bg-gray-800 rounded-t-md">
+            <div className="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
+            <div className="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
+            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+          </div>
+          <div className="bg-gray-900 text-gray-100 p-4 rounded-b-md overflow-x-auto">
+            <pre>{`<!-- Hover Icon Slide Right -->
+<button class="group px-5 py-2.5 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-all duration-200 flex items-center gap-2 overflow-hidden">
+  Download 
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" 
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+    class="transform group-hover:translate-y-1 transition-transform duration-200">
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+    <polyline points="7 10 12 15 17 10"></polyline>
+    <line x1="12" y1="15" x2="12" y2="3"></line>
+  </svg>
+</button>
+
+<!-- Animated Pulse Icon -->
+<button class="group px-5 py-2.5 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 transition-all duration-200 flex items-center gap-2">
+  Send Message
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" 
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+    class="group-hover:animate-ping absolute opacity-60">
+    <path d="M22 2L11 13"></path>
+    <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" 
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 2L11 13"></path>
+    <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
+  </svg>
+</button>`}</pre>
+          </div>
         </div>
 
         <h3 className="text-lg font-medium mb-3">Preview</h3>
-        <div className="bg-white p-6 rounded-lg border border-gray-300 flex flex-wrap gap-3">
-          <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center gap-2">
+        <div className="bg-white p-6 rounded-lg border border-gray-300 flex flex-wrap gap-4">
+          <button className="group px-5 py-2.5 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition-all duration-200 flex items-center gap-2 overflow-hidden">
+            Download
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -104,30 +167,16 @@ export default function Buttons() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
+              className="transform group-hover:translate-y-1 transition-transform duration-200"
             >
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
-            Search
-          </button>
-          <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition-colors flex items-center gap-2">
-            Next
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
             </svg>
           </button>
-          <button className="px-4 py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50 transition-colors flex items-center gap-2">
+
+          <button className="group relative px-5 py-2.5 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 transition-all duration-200 flex items-center gap-2">
+            Send Message
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -138,11 +187,11 @@ export default function Buttons() {
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
+              className="group-hover:animate-ping absolute opacity-60"
             >
-              <path d="M12 20h9" />
-              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+              <path d="M22 2L11 13"></path>
+              <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
             </svg>
-            Edit and Save
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -154,37 +203,58 @@ export default function Buttons() {
               strokeLinecap="round"
               strokeLinejoin="round"
             >
-              <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" />
-              <polyline points="17 21 17 13 7 13 7 21" />
-              <polyline points="7 3 7 8 15 8" />
+              <path d="M22 2L11 13"></path>
+              <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
             </svg>
           </button>
         </div>
       </div>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-4">Button States</h2>
+      <h2 className="text-2xl font-semibold mt-10 mb-4">
+        Interactive State Buttons
+      </h2>
       <p className="mb-6">
-        Quarka UI buttons support various states to provide feedback to users:
+        Quarka UI buttons provide clear visual feedback for different states:
       </p>
 
       <div className="bg-gray-100 p-6 rounded-xl mb-8">
-        <h3 className="text-lg font-medium mb-3">Example</h3>
-        <div className="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto mb-4">
-          <pre>{`<Button>Default</Button>
-<Button disabled>Disabled</Button>
-<Button isLoading>Loading</Button>
-<Button isActive>Active</Button>`}</pre>
+        <h3 className="text-lg font-medium mb-3">State Transitions</h3>
+        <div className="bg-gray-900 rounded-md mb-6">
+          <div className="flex items-center px-4 py-2 bg-gray-800 rounded-t-md">
+            <div className="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
+            <div className="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
+            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+          </div>
+          <div className="bg-gray-900 text-gray-100 p-4 rounded-b-md overflow-x-auto">
+            <pre>{`<!-- Loading Button with Spinner -->
+<button class="relative px-6 py-2.5 bg-purple-600 text-white rounded-lg shadow-md hover:bg-purple-700 transition-all duration-200 flex items-center gap-2">
+  <svg class="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+  </svg>
+  Processing...
+</button>
+
+<!-- Success Animation Button -->
+<button class="px-6 py-2.5 bg-green-500 text-white rounded-lg shadow-md transition-all duration-200 flex items-center gap-2">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" 
+    stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" 
+    class="animate-bounce">
+    <polyline points="20 6 9 17 4 12"></polyline>
+  </svg>
+  Success!
+</button>
+
+<!-- Disabled Button -->
+<button class="px-6 py-2.5 bg-gray-400 text-white rounded-lg shadow-sm cursor-not-allowed opacity-70" disabled>
+  Not Available
+</button>`}</pre>
+          </div>
         </div>
 
         <h3 className="text-lg font-medium mb-3">Preview</h3>
-        <div className="bg-white p-6 rounded-lg border border-gray-300 flex flex-wrap gap-3">
-          <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-            Default
-          </button>
-          <button className="px-4 py-2 bg-blue-600 text-white rounded-md opacity-50 cursor-not-allowed">
-            Disabled
-          </button>
-          <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center gap-2">
+        <div className="bg-white p-6 rounded-lg border border-gray-300 flex flex-wrap gap-4">
+          <button className="relative px-6 py-2.5 bg-purple-600 text-white rounded-lg shadow-md hover:bg-purple-700 transition-all duration-200 flex items-center gap-2">
             <svg
               className="animate-spin h-4 w-4 text-white"
               xmlns="http://www.w3.org/2000/svg"
@@ -205,287 +275,94 @@ export default function Buttons() {
                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
               ></path>
             </svg>
-            Loading
+            Processing...
           </button>
-          <button className="px-4 py-2 bg-blue-700 text-white rounded-md">
-            Active
+
+          <button className="px-6 py-2.5 bg-green-500 text-white rounded-lg shadow-md transition-all duration-200 flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="animate-bounce"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Success!
+          </button>
+
+          <button
+            className="px-6 py-2.5 bg-gray-400 text-white rounded-lg shadow-sm cursor-not-allowed opacity-70"
+            disabled
+          >
+            Not Available
           </button>
         </div>
       </div>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-4">API Reference</h2>
-
-      <h3 className="text-lg font-semibold mt-6 mb-3">Props</h3>
-      <div className="overflow-x-auto mb-8">
-        <table className="min-w-full divide-y divide-gray-300 border border-gray-300 rounded-lg">
-          <thead className="bg-gray-50">
-            <tr>
-              <th
-                scope="col"
-                className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900"
-              >
-                Prop
-              </th>
-              <th
-                scope="col"
-                className="py-3.5 px-3 text-left text-sm font-semibold text-gray-900"
-              >
-                Type
-              </th>
-              <th
-                scope="col"
-                className="py-3.5 px-3 text-left text-sm font-semibold text-gray-900"
-              >
-                Default
-              </th>
-              <th
-                scope="col"
-                className="py-3.5 px-3 text-left text-sm font-semibold text-gray-900"
-              >
-                Description
-              </th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-200 bg-white">
-            <tr>
-              <td className="py-4 pl-4 pr-3 text-sm font-medium text-gray-900">
-                variant
-              </td>
-              <td className="py-4 px-3 text-sm text-gray-500">
-                'primary' | 'secondary' | 'outline' | 'ghost'
-              </td>
-              <td className="py-4 px-3 text-sm text-gray-500">'primary'</td>
-              <td className="py-4 px-3 text-sm text-gray-500">
-                The visual style of the button
-              </td>
-            </tr>
-            <tr>
-              <td className="py-4 pl-4 pr-3 text-sm font-medium text-gray-900">
-                size
-              </td>
-              <td className="py-4 px-3 text-sm text-gray-500">
-                'sm' | 'md' | 'lg'
-              </td>
-              <td className="py-4 px-3 text-sm text-gray-500">'md'</td>
-              <td className="py-4 px-3 text-sm text-gray-500">
-                The size of the button
-              </td>
-            </tr>
-            <tr>
-              <td className="py-4 pl-4 pr-3 text-sm font-medium text-gray-900">
-                leftIcon
-              </td>
-              <td className="py-4 px-3 text-sm text-gray-500">
-                React.ReactElement
-              </td>
-              <td className="py-4 px-3 text-sm text-gray-500">-</td>
-              <td className="py-4 px-3 text-sm text-gray-500">
-                Icon component to display at the left side of the button
-              </td>
-            </tr>
-            <tr>
-              <td className="py-4 pl-4 pr-3 text-sm font-medium text-gray-900">
-                rightIcon
-              </td>
-              <td className="py-4 px-3 text-sm text-gray-500">
-                React.ReactElement
-              </td>
-              <td className="py-4 px-3 text-sm text-gray-500">-</td>
-              <td className="py-4 px-3 text-sm text-gray-500">
-                Icon component to display at the right side of the button
-              </td>
-            </tr>
-            <tr>
-              <td className="py-4 pl-4 pr-3 text-sm font-medium text-gray-900">
-                isLoading
-              </td>
-              <td className="py-4 px-3 text-sm text-gray-500">boolean</td>
-              <td className="py-4 px-3 text-sm text-gray-500">false</td>
-              <td className="py-4 px-3 text-sm text-gray-500">
-                If true, the button will show a spinner
-              </td>
-            </tr>
-            <tr>
-              <td className="py-4 pl-4 pr-3 text-sm font-medium text-gray-900">
-                isActive
-              </td>
-              <td className="py-4 px-3 text-sm text-gray-500">boolean</td>
-              <td className="py-4 px-3 text-sm text-gray-500">false</td>
-              <td className="py-4 px-3 text-sm text-gray-500">
-                If true, the button will be styled in an active state
-              </td>
-            </tr>
-            <tr>
-              <td className="py-4 pl-4 pr-3 text-sm font-medium text-gray-900">
-                disabled
-              </td>
-              <td className="py-4 px-3 text-sm text-gray-500">boolean</td>
-              <td className="py-4 px-3 text-sm text-gray-500">false</td>
-              <td className="py-4 px-3 text-sm text-gray-500">
-                If true, the button will be disabled
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3 className="text-lg font-semibold mt-6 mb-3">CSS Variables</h3>
-      <p className="mb-4">
-        Quarka UI buttons can be customized via CSS variables in your theme:
-      </p>
-      <div className="overflow-x-auto mb-8">
-        <table className="min-w-full divide-y divide-gray-300 border border-gray-300 rounded-lg">
-          <thead className="bg-gray-50">
-            <tr>
-              <th
-                scope="col"
-                className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900"
-              >
-                Variable
-              </th>
-              <th
-                scope="col"
-                className="py-3.5 px-3 text-left text-sm font-semibold text-gray-900"
-              >
-                Default
-              </th>
-              <th
-                scope="col"
-                className="py-3.5 px-3 text-left text-sm font-semibold text-gray-900"
-              >
-                Description
-              </th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-200 bg-white">
-            <tr>
-              <td className="py-4 pl-4 pr-3 text-sm font-medium text-gray-900">
-                --quarka-button-primary-bg
-              </td>
-              <td className="py-4 px-3 text-sm text-gray-500">
-                theme('colors.blue.600')
-              </td>
-              <td className="py-4 px-3 text-sm text-gray-500">
-                Background color of primary button
-              </td>
-            </tr>
-            <tr>
-              <td className="py-4 pl-4 pr-3 text-sm font-medium text-gray-900">
-                --quarka-button-primary-text
-              </td>
-              <td className="py-4 px-3 text-sm text-gray-500">
-                theme('colors.white')
-              </td>
-              <td className="py-4 px-3 text-sm text-gray-500">
-                Text color of primary button
-              </td>
-            </tr>
-            <tr>
-              <td className="py-4 pl-4 pr-3 text-sm font-medium text-gray-900">
-                --quarka-button-border-radius
-              </td>
-              <td className="py-4 px-3 text-sm text-gray-500">
-                theme('borderRadius.md')
-              </td>
-              <td className="py-4 px-3 text-sm text-gray-500">
-                Border radius of all buttons
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2 className="text-2xl font-semibold mt-10 mb-4">Customization</h2>
+      <h2 className="text-2xl font-semibold mt-10 mb-4">
+        Glass Morphism Buttons
+      </h2>
       <p className="mb-6">
-        You can customize the button component in your Tailwind config:
+        Embrace modern design trends with these glass-effect buttons:
       </p>
 
       <div className="bg-gray-100 p-6 rounded-xl mb-8">
-        <h3 className="text-lg font-medium mb-3">tailwind.config.js</h3>
-        <div className="bg-gray-900 text-gray-100 p-4 rounded-md overflow-x-auto">
-          <pre>{`module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        'primary': {
-          '50': '#eff6ff',
-          '100': '#dbeafe',
-          // ... other shades
-          '600': '#2563eb', // This will be used for button primary color
-        }
-      }
-    }
-  }
-}`}</pre>
+        <h3 className="text-lg font-medium mb-3">Glass Effect</h3>
+        <div className="bg-gray-900 rounded-md mb-6">
+          <div className="flex items-center px-4 py-2 bg-gray-800 rounded-t-md">
+            <div className="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
+            <div className="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
+            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+          </div>
+          <div className="bg-gray-900 text-gray-100 p-4 rounded-b-md overflow-x-auto">
+            <pre>{`<div class="p-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl">
+  <!-- Glass Button -->
+  <button class="px-6 py-3 bg-white bg-opacity-20 backdrop-filter backdrop-blur-sm text-white border border-white border-opacity-20 rounded-lg shadow-lg hover:bg-opacity-30 transition-all duration-200">
+    Glass Button
+  </button>
+</div>`}</pre>
+          </div>
+        </div>
+
+        <h3 className="text-lg font-medium mb-3">Preview</h3>
+        <div className="p-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex justify-center">
+          <button className="px-6 py-3 bg-white bg-opacity-20 backdrop-filter backdrop-blur-sm text-white border border-white border-opacity-20 rounded-lg shadow-lg hover:bg-opacity-30 transition-all duration-200">
+            Glass Button
+          </button>
         </div>
       </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Best Practices</h2>
       <ul className="list-disc pl-6 space-y-2 mb-8">
-        <li>Use primary buttons for the main action in a form or section</li>
+        <li>Maintain consistent button styles throughout your interface</li>
+        <li>Use animations thoughtfully to enhance, not distract</li>
+        <li>Ensure text has sufficient contrast against button backgrounds</li>
         <li>
-          Limit the number of primary buttons on a page to avoid confusion
+          Consider touch targets of at least 44×44px for mobile interfaces
         </li>
-        <li>Use secondary or outline buttons for less important actions</li>
+        <li>Provide visual feedback for all interactive states</li>
         <li>
-          Include clear, concise text that describes the action the button
-          performs
-        </li>
-        <li>
-          Add loading states to buttons that trigger asynchronous operations
-        </li>
-        <li>
-          Ensure buttons are large enough to be easily clickable on touch
-          devices
+          Use appropriate colors to convey meaning (e.g., green for success)
         </li>
       </ul>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">Accessibility</h2>
-      <p className="mb-4">
-        Quarka UI buttons follow best practices for accessibility:
-      </p>
-      <ul className="list-disc pl-6 space-y-2 mb-8">
-        <li>All buttons have appropriate contrast ratios</li>
-        <li>Focus states are clearly visible</li>
-        <li>Loading states announce status to screen readers</li>
-        <li>
-          Disabled buttons are properly conveyed to assistive technologies
-        </li>
-        <li>
-          When using icon-only buttons, always include an{" "}
-          <code className="bg-gray-100 px-1 py-0.5 rounded">aria-label</code>
-        </li>
-      </ul>
-
-      <h2 className="text-2xl font-semibold mt-10 mb-4">Related Components</h2>
+      <p className="mb-4">Quarka UI prioritizes accessible button design:</p>
       <ul className="list-disc pl-6 space-y-2">
+        <li>All buttons maintain WCAG 2.1 AA contrast requirements</li>
         <li>
-          <a
-            href="/docs/components/icon-button"
-            className="text-blue-600 hover:underline"
-          >
-            IconButton
-          </a>{" "}
-          - For buttons with only icons
+          Animations respect user preferences with{" "}
+          <code>prefers-reduced-motion</code> support
         </li>
-        <li>
-          <a
-            href="/docs/components/button-group"
-            className="text-blue-600 hover:underline"
-          >
-            ButtonGroup
-          </a>{" "}
-          - For grouping related buttons
-        </li>
-        <li>
-          <a
-            href="/docs/components/dropdown"
-            className="text-blue-600 hover:underline"
-          >
-            Dropdown
-          </a>{" "}
-          - For button-activated dropdown menus
-        </li>
+        <li>Focus states are clearly visible for keyboard navigation</li>
+        <li>Icon buttons include proper ARIA labels</li>
+        <li>Loading states announce status changes to screen readers</li>
       </ul>
     </div>
   );

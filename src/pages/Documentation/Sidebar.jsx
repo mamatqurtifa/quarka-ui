@@ -41,40 +41,13 @@ export default function Sidebar({
           strokeLinejoin="round"
           className="w-4 h-4"
         >
-          <circle cx="12" cy="12" r="10"></circle>
-          <line x1="12" y1="8" x2="12" y2="12"></line>
-          <line x1="12" y1="16" x2="12.01" y2="16"></line>
-        </svg>
-      ),
-      items: [
-        { name: "What is Quarka UI", href: "/docs/introduction" },
-        { name: "Why Quarka UI", href: "/docs/introduction/why-quarka" },
-        { name: "Comparison", href: "/docs/introduction/comparison" },
-      ],
-    },
-    {
-      title: "Getting Started",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="w-4 h-4"
-        >
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
           <polyline points="9 22 9 12 15 12 15 22"></polyline>
         </svg>
       ),
       items: [
+        { name: "What is Quarka UI", href: "/docs/introduction" },
         { name: "Installation", href: "/docs/getting-started/installation" },
-        { name: "Quick Start", href: "/docs/getting-started/quick-start" },
-        { name: "Usage with React", href: "/docs/getting-started/react" },
-        { name: "Usage with Next.js", href: "/docs/getting-started/nextjs" },
-        { name: "Usage with Vue", href: "/docs/getting-started/vue" },
       ],
     },
     {

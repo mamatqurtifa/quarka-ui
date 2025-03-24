@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // Default content for introduction page
 const IntroductionContent = () => (
@@ -141,21 +142,21 @@ export default function DocContent({ section, subsection }) {
         <div className="flex justify-between">
           <div>
             {/* Previous link would go here */}
-            <a
-              href="#"
+            <Link
+              to="/"
               className="text-sm font-medium text-blue-600 hover:text-blue-800"
             >
               ← Previous
-            </a>
+            </Link>
           </div>
           <div>
             {/* Next link would go here */}
-            <a
-              href="#"
+            <Link
+              to="/docs/getting-started/installation"
               className="text-sm font-medium text-blue-600 hover:text-blue-800"
             >
               Next →
-            </a>
+            </Link>
           </div>
         </div>
       </div>
