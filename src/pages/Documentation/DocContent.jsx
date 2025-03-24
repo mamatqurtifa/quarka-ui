@@ -86,6 +86,14 @@ const ComponentsButtonGroup = React.lazy(() =>
   import("./content/components/button-group")
 );
 
+const ComponentsCards = React.lazy(() =>
+  import("./content/components/cards")
+);
+
+const ComponentsForms = React.lazy(() =>
+  import("./content/components/forms")
+);
+
 export default function DocContent({ section, subsection }) {
   // Define content map for only existing components
   const contentComponents = {
@@ -97,7 +105,9 @@ export default function DocContent({ section, subsection }) {
     },
     components: {
       buttons: ComponentsButtons,
-      "button-group": ComponentsButtonGroup, // Added button-group component
+      "button-group": ComponentsButtonGroup,
+      cards: ComponentsCards,
+      forms: ComponentsForms,
     },
   };
 
